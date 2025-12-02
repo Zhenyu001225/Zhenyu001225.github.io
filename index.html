@@ -104,7 +104,7 @@
 I received my B.E. in Software Engineering from the <a href="https://en.uestc.edu.cn/">University of Electronic Science and Technology of China</a>.
                         </p>
                         <h3 id="research-highlights">Research Highlights</h3>
-                        <!-- <div style="border-left: 4px solid #0066cc; padding-left: 15px; margin: 20px 0;">
+                        <div style="border-left: 4px solid #0066cc; padding-left: 15px; margin: 20px 0;">
                             <p>
                                 My research interests lie in <strong>machine learning systems</strong>,
                                 <strong>software-hardware co-design</strong>, and <strong>trustworthy AI</strong>.
@@ -114,7 +114,7 @@ I received my B.E. in Software Engineering from the <a href="https://en.uestc.ed
                             </p>
                         </div>
                         
-                        <div style="border: 2px solidrgb(234, 234, 234); padding: 20px; border-radius: 8px; background-color: #f8f8f8; margin: 20px 0;">
+                        <!-- <div style="border: 2px solidrgb(234, 234, 234); padding: 20px; border-radius: 8px; background-color: #f8f8f8; margin: 20px 0;">
                             <p>
                                 <span style="color: #666; font-size: 0.9em;">
                                     <sup>★</sup>
@@ -863,37 +863,8 @@ I received my B.E. in Software Engineering from the <a href="https://en.uestc.ed
                         <p>
                             <span style="color: #666; font-size: 0.9em;">(* indicates equal contribution)</span>
                         </p>
+                        
                         <h4 id="workshops--preprints">Workshops / Preprints</h4>
-                        <p>
-                            <strong>
-                                <a href="https://arxiv.org/abs/2509.06794">Dato: A Task-Based Programming Model for Dataflow Accelerators</a>
-                            </strong>
-                            <br/>
-                            Shihan Fang*, <strong>Hongzheng Chen</strong>
-                            *, Niansong Zhang, Jiajie Li, Han Meng, Adrian Liu, Zhiru Zhang<br/>
-                            <span style="color:gray">
-                                <i>arXiv:2509.06794</i>
-                                , 2025
-                            </span>
-                            |
-<a href="javascript:void(0)" onclick="toggleAbstract('dato-abs')">[abs]</a>
-                            |
-<a href="javascript:void(0)" onclick="toggleBib('dato-bib')">[bib]</a>
-                            |
-
-                            <a href="https://github.com/cornell-zhang/allo">
-                                <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                            </a>
-                        </p>
-                        <div id="dato-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Recent deep learning workloads increasingly push computational demand beyond what current memory systems can sustain, with many kernels stalling on data movement rather than computation. While modern dataflow accelerators incorporate on-chip streaming to mitigate off-chip bandwidth limitations, existing programming models struggle to harness these capabilities effectively. Low-level interfaces provide fine-grained control but impose significant development overhead, whereas high-level tile-based languages abstract away communication details, restricting optimization and forcing compilers to reconstruct the intended dataflow. We present Dato, a Python-embedded, task-based programming model for dataflow accelerators that elevates data communication and sharding to first-class type constructs. Developers write programs as a graph of tasks connected via explicit stream types, with sharded inputs specified using layout types. These tasks are first mapped virtually onto the accelerator's spatial fabric, and the compiler then generates a physical mapping that respects hardware constraints. Experimental results on both AMD Ryzen AI NPU and Alveo FPGA devices demonstrate that Dato achieves high performance while significantly reducing the burden of writing optimized code. On the NPU, Dato attains up to 84% hardware utilization for GEMM and delivers a 2.81x speedup on attention kernels compared to a state-of-the-art commercial framework. On the FPGA, Dato surpasses leading frameworks in performance when generating custom systolic arrays, achieving 98% of the theoretical peak performance.
-</div>
-                        <div id="dato-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{fang2025dato,
-    title={Dato: A Task-Based Programming Model for Dataflow Accelerators}, 
-    author={Shihan Fang and Hongzheng Chen and Niansong Zhang and Jiajie Li and Han Meng and Adrian Liu and Zhiru Zhang},
-    journal={arXiv preprint arXiv:2509.06794},
-    year={2025}
-}
-</div>
                         <p>
                             <strong>
                                 <a href="https://arxiv.org/abs/2506.07972">HeuriGym: An Agentic Benchmark for LLM-Crafted Heuristics in Combinatorial Optimization</a>
@@ -928,88 +899,8 @@ I received my B.E. in Software Engineering from the <a href="https://en.uestc.ed
     year={2025}
 }
 </div>
-                        <p>
-                            <strong>
-                                <a href="https://www.c4ml.org/c4ml-2025">Allo: Catalyzing Accelerator Design and Programming for Machine Learning</a>
-                            </strong>
-                            <br/>
-                            <strong>Hongzheng Chen</strong>
-                            , Niansong Zhang, Shaojie Xiang, Zhiru Zhang<br/>
-                            <span style="color:gray">
-                                <i>
-                                    <span class="tooltip">
-                                        C4ML@CGO<span class="tooltiptext">Compilers for Machine Learning Workshop at International Symposium on Code Generation and Optimization</span>
-                                    </span>
-                                </i>
-                                , 2025
-                            </span>
-                            |
-<a href="javascript:void(0)" onclick="toggleAbstract('allo-c4ml-abs')">[abs]</a>
-                            |
-<a href="javascript:void(0)" onclick="toggleBib('allo-c4ml-bib')">[bib]</a>
-                            |
 
-                            <a href="https://github.com/cornell-zhang/allo">
-                                <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                            </a>
-                        </p>
-                        <div id="allo-c4ml-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">
-                            As the benefits of technology scaling diminish, specialized hardware accelerators are crucial for performance in emerging machine learning applications. However, designers currently lack effective tools and methodologies to construct complex, high-performance accelerator architectures. Existing high-level synthesis (HLS) tools often require intrusive source-level changes to attain satisfactory quality of results. While new accelerator design languages (ADLs) aim to enhance or replace HLS, they are typically more effective for simple applications with a single kernel, rather than for hierarchical designs with multiple kernels.
-<br/>
-                            <br/>
-                            In the first part of this talk, we will introduce Allo, a composable programming model for efficient hardware accelerator design. Allo decouples hardware customizations, including compute, memory, communication, and data types from algorithm specification, and encapsulates them as a set of customization primitives, which enables verifiable stepwise optimizations. Allo also preserves the hierarchical structure of an input program by combining customizations from different functions in a bottom-up, type-safe manner, enabling both temporal and spatial composition.
-<br/>
-                            <br/>We will then illustrate how Allo optimizes large-scale designs with two case studies. First, we develop a spatial accelerator architecture for large language models (LLMs) and prototype it on an AMD U280 FPGA, demonstrating higher energy efficiency than NVIDIA GPUs in generative inference settings. In addition, we deploy a convolutional neural network (CNN) design using Allo on the AMD Ryzen AI Engine, achieving substantial speedups over prior approaches.
 
-                        </div>
-                        <div id="allo-c4ml-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{chen2024allo,
-  title={Allo: A programming model for composable accelerator design},
-  author={Chen, Hongzheng and Zhang, Niansong and Xiang, Shaojie and Zeng, Zhichen and Dai, Mengjia and Zhang, Zhiru},
-  journal={Proceedings of the ACM on Programming Languages},
-  volume={8},
-  number={PLDI},
-  pages={593--620},
-  year={2024},
-  publisher={ACM New York, NY, USA}
-}
-</div>
-                        <p>
-                            <strong>
-                                <a href="files/papers/sch-pldi24-src.pdf">🥉 Uncovering Magic with Magic: Schedule Reconstruction from High-Performance Kernel Libraries</a>
-                            </strong>
-                            <br/>
-                            <strong>Hongzheng Chen</strong>
-                            <br/>
-                            <span style="color:gray">
-                                <i>
-                                    <span class="tooltip">
-                                        PLDI Student Research Competition (SRC)<span class="tooltiptext">ACM SIGPLAN Conference on Programming Language Design and Implementation Student Research Competition</span>
-                                    </span>
-                                </i>
-                                , 2024 
-                                <font color="brown">
-                                    <b>(Bronze)</b>
-                                </font>
-                            </span>
-                            |
-<a href="javascript:void(0)" onclick="toggleAbstract('src-abs')">[abs]</a>
-                            |
-<a href="javascript:void(0)" onclick="toggleBib('src-bib')">[bib]</a>
-                            |
-
-                            <a href="https://github.com/cornell-zhang/allo">
-                                <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                            </a>
-                        </p>
-                        <div id="src-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">To fully harness the power of hardware accelerators, high-performance kernels are essential for various application domains in deep learning and scientific computing. Many of these kernels are carefully crafted and optimized by hand using languages like C/C++, demanding significant engineering efforts. Recent developments in kernel libraries have embraced schedule languages that decouple program optimization (ie, schedule) from algorithm specification. Users only need to write a few lines of schedule code to transform a basic program into an optimized one. However, this shift merely transfers the coding burden from writing optimized kernels to writing efficient schedules. While autoschedulers help generate optimized programs automatically, users have little control over the optimizations and their granularity remains opaque. To tackle this challenge, we introduce a novel research problem: schedule reconstruction, that is, reconstructing the schedule primitives from an optimized kernel implementation. Unlike existing approaches that focus on generating optimized kernels, our goal is to reveal the optimizations within these kernels by generating stepby-step schedule primitives. By providing an algorithm specification and an optimized kernel implementation, we propose a two-stage program synthesis technique to automatically generate the necessary schedule for this transformation. While this paper represents an initial exploration of schedule synthesis, our work demonstrates the potential of this idea to:(1) Aiding programmers in comprehending the intricacies of high-performance program optimizations, making it easier to debug and allowing them to experiment with different tradeoff combinations. (2) Potentially providing templates for automating compilers to generate even more high-performance code than manually optimized ones.
-</div>
-                        <div id="src-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{chen2024pldisrc,
-  title={Uncovering Magic with Magic: Schedule Reconstruction from High-Performance Kernel Libraries},
-  author={Chen, Hongzheng},
-  journal={ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI) Student Research Competition (SRC)},
-  year={2024}
-}
-</div>
                         <p>
                             <strong>
                                 <a href="https://arxiv.org/abs/2203.02549">Structured Pruning is All You Need for Pruning CNNs at Initialization</a>
@@ -1026,6 +917,7 @@ I received my B.E. in Software Engineering from the <a href="https://en.uestc.ed
                             |
 <a href="javascript:void(0)" onclick="toggleBib('pai-bib')">[bib]</a>
                         </p>
+                        
                         <div id="pai-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Pruning is a popular technique for reducing the model size and computational cost of convolutional neural networks (CNNs). However, a slow retraining or fine-tuning procedure is often required to recover the accuracy loss caused by pruning. Recently, a new research direction on weight pruning, pruning-at-initialization (PAI), is proposed to directly prune CNNs before training so that fine-tuning or retraining can be avoided. While PAI has shown promising results in reducing the model size, existing approaches rely on fine-grained weight pruning which requires unstructured sparse matrix computation, making it difficult to achieve real speedup in practice unless the sparsity is very high. This work is the first to show that fine-grained weight pruning is in fact not necessary for PAI. Instead, the layerwise compression ratio is the main critical factor to determine the accuracy of a CNN model pruned at initialization. Based on this key observation, we propose PreCropping, a structured hardware-efficient model compression scheme. PreCropping directly compresses the model at the channel level following the layerwise compression ratio. Compared to weight pruning, the proposed scheme is regular and dense in both storage and computation without sacrificing accuracy. In addition, since PreCropping compresses CNNs at initialization, the computational and memory costs of CNNs are reduced for both training and inference on commodity hardware. We empirically demonstrate our approaches on several modern CNN architectures, including ResNet, ShuffleNet, and MobileNet for both CIFAR-10 and ImageNet.
 </div>
                         <div id="pai-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{cai2022pai,
