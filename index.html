@@ -239,43 +239,41 @@ I received my B.E. in Software Engineering from the <a href="https://en.uestc.ed
                         <h3 id="publications">Publications</h3>
                         <p>
                             <strong>
-                                <a href="https://arxiv.org/abs/2510.14719">Tawa: Automatic Warp Specialization for Modern GPUs with Asynchronous References</a>
+                                <a href="">STARC: Selective Token Access with Remapping and Clustering for Efficient LLM Decoding on PIM Systems</a>
                             </strong>
                             <br/>
-                            <strong>Hongzheng Chen</strong>
-                            , Bin Fan, Alexander Collins, Bastian Hagedorn, Evghenii Gaburov, Masahiro Masuda, Matthew Brookhart, Chris Sullivan, Jason Knight, Zhiru Zhang, Vinod Grover<br/>
+                            Zehao Fan, Yunzhen Liu, Garrett Gagnon, <strong>Zhenyu Liu</strong>, Yayue Hou, Hadjer Benmeziane, Kaoutar El Maghraoui, Liu Liu<br/>
                             <span style="color:gray">
                                 <i>
                                     <span class="tooltip">
-                                        CGO<span class="tooltiptext">IEEE/ACM International Symposium on Code Generation and Optimization</span>
+                                        ASPLOS<span class="tooltiptext">International Conference on Architectural Support for Programming Languages and Operating Systems</span>
                                     </span>
                                 </i>
                                 , 2026
                             </span>
                             |
-<a href="javascript:void(0)" onclick="toggleAbstract('tawa-abs')">[abs]</a>
+<a href="javascript:void(0)" onclick="toggleAbstract('starc-abs')">[abs]</a>
                             |
-<a href="javascript:void(0)" onclick="toggleBib('tawa-bib')">[bib]</a>
-                            |
+<!-- <a href="javascript:void(0)" onclick="toggleBib('starc-bib')">[bib]</a>
+                            | -->
 
-                            <a href="https://github.com/triton-lang/triton/tree/aref_auto_ws">
+                           <!-- <a href="https://github.com/triton-lang/triton/tree/aref_auto_ws">
                                 <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-                            </a>
+                            </a> -->
                         </p>
-                        <div id="tawa-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Modern GPUs feature specialized hardware units that enable high-performance, asynchronous dataflow execution. However, the conventional SIMT programming model is fundamentally misaligned with this task-parallel hardware, creating a significant programmability gap. While hardware-level warp specialization is the key to unlocking peak performance, it forces developers to manually orchestrate complex, low-level communication and software pipelines--a process that is labor-intensive, error-prone, and unsustainable. To address this challenge, we present Tawa, an automated compiler that systematically generates high-performance, warp-specialized code from a high-level, tile-based program. Central to our approach is a novel IR abstraction, asynchronous references (aref), which expresses warp-level communication without exposing low-level hardware details. Using this abstraction, Tawa automatically partitions programs into producer-consumer roles and manages the intricate dataflow pipeline, relieving developers of invasive kernel rewriting. Evaluation on NVIDIA H100 GPUs across representative LLM kernels shows that Tawa delivers high hardware utilization, achieving up to 1.1x speedup over highly optimized cuBLAS GEMM kernels. For attention workloads, Tawa attains 1.2x speedup over Triton and matches the performance of the hand-optimized CUTLASS C++ FlashAttention-3 kernel with far less programming effort.
-</div>
-                        <div id="tawa-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{chen2025tawa,
+                        <div id="starc-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Serving large language models (LLMs) places significant pressure on memory systems due to frequent accesses and growing key–value (KV) caches as context lengths increase. Processing-in-memory (PIM) architectures offer high internal bandwidth and near-data compute parallelism, but current designs target dense attention and perform poorly under the irregular access patterns of dynamic KV cache sparsity. To mitigate this limitation, we propose STARC, a sparsity-optimized data mapping scheme for efficient LLM decoding on PIM. STARC clusters semantically similar KV pairs and co-locates them contiguously within PIM banks, enabling retrieval at cluster granularity by matching queries against precomputed centroids. This bridges the gap between fine-grained sparse attention and row-level PIM operations, improving utilization while minimizing overhead. On a simulated HBM-PIM system, under constrained KV budgets, STARC achieves up to 78\% and 65\% reductions in attention-layer latency and energy over token-wise sparsity methods, and up to 93\% and 92\% reductions relative to full attention, while preserving model accuracy. </div>
+                        <!-- <div id="starc-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{chen2025tawa,
     title={Tawa: Automatic Warp Specialization for Modern GPUs with Asynchronous References}, 
     author={Hongzheng Chen and Bin Fan and Alexander Collins and Bastian Hagedorn and Evghenii Gaburov and Masahiro Masuda and Matthew Brookhart and Chris Sullivan and Jason Knight and Zhiru Zhang and Vinod Grover},
     journal={arXiv preprint arXiv:2510.14719},
     year={2025}
 }
-</div>
+</div> -->
                         <p>
                             <strong>
-                                <a href="https://arxiv.org/abs/2509.05451">Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device</a>
+                                <a href="">SAGE: Saliency-Aware Grouping for Efficient Mapping of LLMs on Analog Compute-in-Memory</a>
                             </strong>
-                            <a href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#available">
+                            <!-- <a href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#available">
                                 <img src="https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_available_dl.jpg" style="vertical-align:text-top;" width="2.5%"/>
                             </a>
                             <a href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#functional">
@@ -283,41 +281,38 @@ I received my B.E. in Software Engineering from the <a href="https://en.uestc.ed
                             </a>
                             <a href="https://www.acm.org/publications/policies/artifact-review-and-badging-current#reproduced">
                                 <img src="https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/results_reproduced_dl.jpg" style="vertical-align:text-top;" width="2.5%"/>
-                            </a>
+                            </a> -->
                             <br/>
-                            Niansong Zhang, Wenbo Zhu, Courtney Golden, Dan Ilan, <strong>Hongzheng Chen</strong>
-                            , Christopher Batten, Zhiru Zhang<br/>
+                            Yayue Hou, <strong>Zhenyu Liu</strong>strong>, Garrett Gagnon, Hsinyu Tsai, Kaoutar El Maghraoui, Geoffrey W. Burr, Liu Liu<br/>
                             <span style="color:gray">
                                 <i>
                                     <span class="tooltip">
-                                        MICRO<span class="tooltiptext">The International Symposium on Microarchitecture</span>
+                                        ICCAD<span class="tooltiptext">International Conference on Computer-Aided Design</span>
                                     </span>
                                 </i>
                                 , 2025
                             </span>
                             |
-<a href="javascript:void(0)" onclick="toggleAbstract('pim-abs')">[abs]</a>
+<a href="javascript:void(0)" onclick="toggleAbstract('sage-abs')">[abs]</a>
                             |
-<a href="javascript:void(0)" onclick="toggleBib('pim-bib')">[bib]</a>
-                            |
+<!-- <a href="javascript:void(0)" onclick="toggleBib('sage-bib')">[bib]</a>
+                            | -->
 
-                            <a href="https://github.com/cornell-zhang/apu-micro25-artifact">
+                           <!--  <a href="https://github.com/cornell-zhang/apu-micro25-artifact">
                                 <i class="fa fa-file-archive-o" aria-hidden="true"></i>
-                            </a>
-                            | <a href="https://economictimes.indiatimes.com/news/international/us/gsit-stock-skyrockets-200-today-as-cornell-study-confirms-companys-apu-matches-gpu-performance/articleshow/124707644.cms">News</a>
+                            </a> -->
                         </p>
-                        <div id="pim-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">
-                            Compute-in-SRAM architectures offer a promising approach to achieving higher performance and energy efficiency across a range of data-intensive applications. However, prior evaluations have largely relied on simulators or small prototypes, limiting the understanding of their real-world potential. In this work, we present a comprehensive performance and energy characterization of a commercial compute-in-SRAM device, the GSI APU, under realistic workloads. We compare the GSI APU against established architectures, including CPUs and GPUs, to quantify its energy efficiency and performance potential. We introduce an analytical framework for general-purpose compute-in-SRAM device that reveals fundamental optimization principles by modeling performance trade-offs, thereby guiding program optimizations.<br/>
-                            <br/>Exploiting the fine-grained parallelism of tightly integrated memory-compute architectures requires careful data management. We address this by proposing three optimizations: communication-aware reduction mapping, coalesced DMA, and broadcast-friendly data layouts. When applied to retrieval-augmented generation (RAG) over large corpora (10GB--200GB), these optimizations enable our compute-in-SRAM system to accelerate retrieval by 5.4x-7.5x, improving end-to-end RAG latency by 1.1x-1.8x. The shared off-chip memory bandwidth is modeled using a simulated HBM, while all other components are measured on the real compute-in-SRAM device. Critically, this system matches the performance of an NVIDIA A6000 GPU for RAG while being significantly more energy-efficient (46.1x-107.5x reduction). These findings validate the viability of compute-in-SRAM for complex, real-world applications and provide guidance for advancing the technology.
-
+                        <div id="sage-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">
+                            Large Language Models (LLMs) demand high memory bandwidth and computational efficiency, posing significant challenges for deployment on traditional digital accelerators. Analog Compute-in-Memory (ACIM) architectures offer an attractive alternative by co-locating storage and computation to reduce data movement. However, executing LLMs on ACIM systems remains challenging due to hardware non-idealities and the unique statistical properties of LLM inputs and outputs in FC layers. In particular, long-tailed data distributions containing large-amplitude ``salient values'' degrade analog signal quality under quantization and system noise.
+In this work, we propose SAGE (Saliency-Aware Grouping for Efficient Mapping), a training-free strategy that improves noise resilience by reordering weight and input channels of FC layers based on statistical characteristics of LLMs. We identify kurtosis as a key factor affecting analog robustness and develop a saliency-aware mapping method that reduces output kurtosis to enhance the signal-to-noise ratio. We further introduce a reconfigurable tile design that supports mixed-precision execution and maximizes array utilization across layers. Evaluations on multiple LLMs and benchmarks show that SAGE significantly improves inference accuracy and energy efficiency based on ACIM simulation without requiring retraining.
                         </div>
-                        <div id="pim-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@inproceedings{zhang2025pim,
+                       <!-- <div id="sage-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@inproceedings{zhang2025pim,
   title={Characterizing and Optimizing Realistic Workloads on a Commercial Compute-in-SRAM Device},
   author={Niansong Zhang and Wenbo Zhu and Courtney Golden and Dan Ilan and Hongzheng Chen and Christopher Batten and Zhiru Zhang},
   booktitle = {Proceedings of the 58th Annual IEEE/ACM International Symposium on Microarchitecture},
   year = {2025}
-}
-</div>
+} 
+</div> -->
                         <h4 id="workshops--preprints">Workshops / Preprints</h4>
                         <p>
                             <strong>
