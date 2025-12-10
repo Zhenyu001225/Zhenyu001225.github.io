@@ -351,7 +351,37 @@ In this work, we propose SAGE (Saliency-Aware Grouping for Efficient Mapping), a
 } 
 </div> -->
                         <h4 id="workshops--preprints">Workshops / Preprints</h4>
+                        
+                        <p>
+                            <strong>
+                                <a href="https://arxiv.org/abs/2512.04476">Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems</a>
+                            </strong>
+                            <br/>
+                            Zehao Fan*, <strong>Zhenyu Liu*</strong>strong>, Yunzhen Liu, Yayue Hou, Hadjer Benmeziane, Kaoutar El Maghraoui, Liu Liu<br/>
+                            <span style="color:gray">
+                                <i>
+                                    <span class="tooltip">
+                                        arXiv:2512.04476
+                                    </span>
+                                </i>
+                                , 2025
+                            </span>
+                            |
+<a href="javascript:void(0)" onclick="toggleAbstract('cameo-abs')">[abs]</a>
+                            |
+<a href="javascript:void(0)" onclick="toggleBib('cameo-bib')">[bib]</a>
+                        </p>
+                        <div id="cameo-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Mixture-of-Experts (MoE) models scale large language models through conditional computation, but inference becomes memory-bound once expert weights exceed the capacity of GPU memory. In this case, weights must be offloaded to external memory, and fetching them incurs costly and repeated transfers. We address this by adopting CXL-attached near-data processing (CXL-NDP) as the offloading tier to execute cold experts in place, converting expensive parameter movement into cheaper activation movement. Unlike prior GPU–NDP systems that are largely context-agnostic and reactive, we develop a context-aware MoE system that uses prefill-stage activation statistics to guide decoding-stage expert placement, dynamically pins hot experts in GPU-side HBM, and maps the remainder to CXL-NDP. To meet NDP’s limited compute throughput, we introduce context-aware mixed-precision quantization that allocates per-expert bitwidths (1–4 bit) based on prefill stage. The resulting MoE inference system overlaps GPU and NDP execution while minimizing cross-device movement. The evaluation on the GPU–NDP system shows that our approach achieves up to 8.7× decoding throughput improvement over state-of-the-art method, while incurring only a 0.13% average accuracy drop.</div>
+                        <div id="cameo-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{fan2025context,
+  title={Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems},
+  author={Fan, Zehao and Liu, Zhenyu and Liu, Yunzhen and Hou, Yayue and Benmeziane, Hadjer and Maghraoui, Kaoutar El and Liu, Liu},
+  journal={arXiv preprint arXiv:2512.04476},
+  year={2025}
+}
+</div>
 
+
+                        
                         <p>
                             <strong>
                                 <a href="/papers/sinai.pdf">SINAI: Selective Injection of Noise with Architectural Integration for Robust and Efficient Edge Vision AI</a>
