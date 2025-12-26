@@ -352,7 +352,6 @@ In this work, we propose SAGE (Saliency-Aware Grouping for Efficient Mapping), a
 </div> -->
                         <h4 id="workshops--preprints">Workshops / Preprints</h4>
 
-
                         <p>
                             <strong>
                                 <a href="https://arxiv.org/abs/2512.17073">Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation</a>
@@ -372,7 +371,7 @@ In this work, we propose SAGE (Saliency-Aware Grouping for Efficient Mapping), a
                             |
 <a href="javascript:void(0)" onclick="toggleBib('beam-bib')">[bib]</a>
                         </p>
-                        <div id="beam-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Mixture-of-Experts (MoE) models scale capacity via sparse activation but stress memory and bandwidth. Offloading alleviates GPU memory by fetching experts on demand, yet token-level routing causes irregular transfers that make inference I/O-bound. Static uniform quantization reduces traffic but degrades accuracy under aggressive compression by ignoring expert heterogeneity. We present Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation, which performs router-guided precision restoration using precomputed low-rank compensators. At inference time, our method transfers compact low-rank factors with Top-n (n<k) experts per token and applies compensation to them, keeping others low-bit. Integrated with offloading on GPU and GPU-NDP systems, our method delivers a superior bandwidth-accuracy trade-off and improved throughput.</div>
+                        <div id="beam-abs" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 0.9em;">Mixture-of-Experts (MoE) models scale capacity via sparse activation but stress memory and bandwidth. Offloading alleviates GPU memory by fetching experts on demand, yet token-level routing causes irregular transfers that make inference I/O-bound. Static uniform quantization reduces traffic but degrades accuracy under aggressive compression by ignoring expert heterogeneity. We present Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation, which performs router-guided precision restoration using precomputed low-rank compensators. At inference time, our method transfers compact low-rank factors with Top-n (n&ltk) experts per token and applies compensation to them, keeping others low-bit. Integrated with offloading on GPU and GPU-NDP systems, our method delivers a superior bandwidth-accuracy trade-off and improved throughput.</div>
                         <div id="beam-bib" style="display:none; margin-top:10px; margin-bottom:10px; padding:10px; background-color:#f8f9fa; border-radius:5px; font-family: monospace; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-size: 0.85em;">@article{liu2025bandwidth,
   title={Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation},
   author={Liu, Zhenyu and Liu, Yunzhen and Fan, Zehao and Gagnon, Garrett and Hou, Yayue and Wu, Nan and Kang, Yangwook and Liu, Liu},
@@ -407,9 +406,6 @@ In this work, we propose SAGE (Saliency-Aware Grouping for Efficient Mapping), a
   year={2025}
 }
 </div>
-
-
-                        
                         <p>
                             <strong>
                                 <a href="/papers/sinai.pdf">SINAI: Selective Injection of Noise with Architectural Integration for Robust and Efficient Edge Vision AI</a>
